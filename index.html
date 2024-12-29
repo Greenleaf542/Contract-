@@ -58,6 +58,23 @@
       else{
         document.getElementById('error').innerHTML = 'Form submitted successfully!';
       } 
+      const formData = new FormData(document.getElementById('myForm'));
+
+// Add the access_key if it's not part of the form already
+formData.append('access_key', 'yourAccessKeyHere');  // Replace with your actual key
+
+fetch('your-server-endpoint', {
+  method: 'POST',
+  body: formData
+})
+.then(response => response.json())
+.then(data => {
+  console.log(data);
+})
+.catch(error => {
+  console.error('Error:', error);
+});
+
     })
   </script>
 </html>
