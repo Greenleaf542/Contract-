@@ -1,0 +1,98 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    font-family:  "Poppins", serif;
+    /* "Poppins", serif; */
+    /* "DM Sans", serif; */
+}
+.container_bg
+{
+    height: 617px;
+    background:linear-gradient(rgba(51, 150, 100, 0.7),rgba(51, 150, 100, 0.7)), url('/green-lollips.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+form
+{
+    background: #fff;
+    color: #313131;
+    position: absolute;
+    width: 340px;
+    height: 310px;
+    top: 152.5px;
+    left: 505.5px;
+    border-radius: 0px 60px;
+    box-shadow: 0px 5px 10px rgba(3, 3, 3, 0.2);
+}
+
+.username
+{
+    position: absolute;
+    left: 50px;
+    top: 20px;
+}
+
+#username
+{
+    position: absolute;
+    left: 50px;
+    top: 45px;
+    width: 230px;
+    height: 30px;
+}
+.email
+{
+    position: absolute;
+    left: 50px;
+    top: 85px;
+}
+#email
+{
+    position: absolute;
+    left: 50px;
+    top: 111px;
+    width: 230px;
+    height: 30px;
+}
+.phonenumber
+{
+    position: absolute;
+    left: 50px;
+    top: 152px;
+}
+#phonenumber
+{
+    position: absolute;
+    left: 50px;
+    top: 178px;
+    width: 230px;
+    height: 30px;
+}
+#button
+{
+    position: absolute;
+    left: 100px;
+    top: 250px;
+    border: none;
+    background-color: rgba(51, 150, 100, 0.7);
+    text-align: center;
+    width: 130px;
+    height: 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 14px;
+}
+#button:hover
+{
+    box-shadow: 0px 5px 10px rgba(10, 10, 10, 0.2);
+    transform: scale(1.1);
+    transition: .5s ease;
+    
+}
