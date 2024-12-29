@@ -18,50 +18,46 @@
   <body >
     
    <div class="container pt-4">
-    <form action="https://api.web3forms.com/submit" method="POST" class="row g-3 needs-validation" novalidate>
-        <input type="hidden" name="access_key" value="2e705063-7d04-4c26-b443-ed3af95e9345">
-        <div class="col-md-4">
-          <label for="validationCustom01" class="form-label">First name</label>
-          <input type="text"  name="name" class="form-control" id="validationCustom01" required>
-          <div class="valid-feedback">
-            Looks good!
-          </div>
-        </div>
-        <div class="col-md-4">
-          <label for="validationCustom02" class="form-label">Last name</label>
-          <input type="text"  name="last name" class="form-control" id="validationCustom02"  required>
-          <div class="valid-feedback">
-            Looks good!
-          </div>
-        </div>
-        
-        <div class="col-mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Email address</label>
-            <input type="email"  name="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-          </div>
-          <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">Your Message!</label>
-            <textarea name="message" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-          </div>
-          <div class="col-12">
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-              <label class="form-check-label" for="invalidCheck">
-                Agree to terms and conditions
-              </label>
-              <div class="invalid-feedback">
-                You must agree before submitting.
-              </div>
-            </div>
-          </div>
+    <form id="myForm" action="https://api.web3forms.com/submit" method="POST" class="row g-3 needs-validation" novalidate>
+      <input type="text" id="username" placeholder="Enter username" required>
+      <input type="email" id="email" placeholder="Enter email" required>
+      <input type="password" id="password" placeholder="Enter password" required>
+      
         <div class="col-12">
           <button class="btn btn-primary" type="submit">Submit</button>
         </div>
       </form>
+     <div id="error"></div>
 
    </div>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   </body>
+   <script src="type/JavaScript">
+    document.getElementById('myForm').addEventListener('submit', function(event){
+      event.preventDefault();
+      let error =[];
+      let username = document.getElementById('username').value;
+      let email = document.getElementById('email').value;
+      let password = document.getElementById('password').value;
+
+      if(username.length <3){
+        errors.push('Username must be at least 3 characters');
+      }
+      let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+      if(!emailPattern.test(email)){
+        errors.push('Please enter a valid email address');
+      }
+      if(password.length < 8){
+        errors.push('Password must be at least 8 characters');
+      }
+      if(errors.length > 0){
+        document.getElementById('error').innerHTML = errors.join('<br>');
+      }
+      else{
+        document.getElementById('error').innerHTML = 'Form submitted successfully!';
+      } 
+    })
+  </script>
 </html>
