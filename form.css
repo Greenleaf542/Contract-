@@ -132,4 +132,24 @@ form{
     top: 106px;
 }
 }
+@media(max-width:350px)
+{
+    body{
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+    .container_bg
+{
+    height: 600px;
+    width: 450px;
+    background-size: cover;
+    background-position: center;
+    
+}
+form{
+    
+    left: 58px;
+    top: 106px;
+}
+}
 
