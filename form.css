@@ -111,3 +111,25 @@ form input
     left: 50px;
     color: rgb(37, 231, 189);
 }
+
+@media(max-width:450px)
+{
+    body{
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+    .container_bg
+{
+    height: 521px;
+    width: 450px;
+    background-size: cover;
+    background-position: center;
+    
+}
+form{
+    
+    left: 58px;
+    top: 106px;
+}
+}
+
