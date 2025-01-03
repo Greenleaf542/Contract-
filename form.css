@@ -12,7 +12,7 @@ body
 }
 .container_bg
 {
-    height: 651px;
+    height: 617px;
     background:linear-gradient(rgba(51, 150, 100, 0.7),rgba(51, 150, 100, 0.7)), url('/pexels-stywo-1054218.jpg');
     background-repeat: no-repeat;
     background-position: center;
@@ -25,7 +25,7 @@ form
     position: absolute;
     width: 340px;
     height: 310px;
-    top: 152.5px;
+    top:130.5px;
     left: 505.5px;
     border-radius: 0px 60px;
     box-shadow: 0px 5px 10px rgba(3, 3, 3, 0.2);
@@ -111,7 +111,6 @@ form input
     left: 50px;
     color: rgb(37, 231, 189);
 }
-
 @media(max-width:450px)
 {
     body{
@@ -140,16 +139,16 @@ form{
     }
     .container_bg
 {
-    height: 600px;
-    width: 450px;
+    height: 670px;
+    width: 398px;
     background-size: cover;
     background-position: center;
     
 }
 form{
     
-    left: 58px;
-    top: 106px;
+    left: 33px;
+    top: 125px;
 }
 }
 
